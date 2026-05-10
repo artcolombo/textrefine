@@ -1,14 +1,31 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Vite + React + TS</title>
-	</head>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextRefine - Refine seu texto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>✂️ TextRefine</h1>
+        <p>Cole ou digite o texto abaixo e aplique as transformações</p>
 
-	<body>
-		<div id="root"></div>
-		<script type="module" src="/src/react-app/main.tsx"></script>
-	</body>
+        <div class="toolbar">
+            <button onclick="removeExtraSpaces()">Remover espaços extras</button>
+            <button onclick="removeBlankLines()">Remover linhas vazias</button>
+            <button onclick="toUpperCase()">MAIÚSCULAS</button>
+            <button onclick="toLowerCase()">minúsculas</button>
+            <button onclick="capitalizeSentences()">Capitalizar frases</button>
+            <button onclick="copyText()">📋 Copiar</button>
+            <button onclick="clearText()">🗑️ Limpar</button>
+        </div>
+
+        <textarea id="inputText" placeholder="Seu texto aqui..."></textarea>
+
+        <h3>Resultado:</h3>
+        <div id="outputText" class="output"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
 </html>
