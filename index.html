@@ -3,29 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TextRefine - Refine seu texto</title>
-    <link rel="stylesheet" href="style.css">
+    <title>TextPure - Transforme Seu Texto com Precisão</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .gradient-text {
+            background: linear-gradient(to right, #0e4b5e, #1a3a4a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .tool-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+    </style>
 </head>
-<body>
-    <div class="container">
-        <h1>✂️ TextRefine</h1>
-        <p>Cole ou digite o texto abaixo e aplique as transformações</p>
+<body class="bg-gray-50 font-sans">
 
-        <div class="toolbar">
-            <button onclick="removeExtraSpaces()">Remover espaços extras</button>
-            <button onclick="removeBlankLines()">Remover linhas vazias</button>
-            <button onclick="toUpperCase()">MAIÚSCULAS</button>
-            <button onclick="toLowerCase()">minúsculas</button>
-            <button onclick="capitalizeSentences()">Capitalizar frases</button>
-            <button onclick="copyText()">📋 Copiar</button>
-            <button onclick="clearText()">🗑️ Limpar</button>
+    <!-- Header / Navbar -->
+    <header class="bg-white border-b border-gray-100">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <!-- Simulação do Logo extraído -->
+                <div class="text-[#1a3a4a] text-2xl font-bold flex items-center">
+                    <i class="fa-solid fa-feather-pointed mr-2"></i> TextPure
+                </div>
+            </div>
+            <div class="hidden md:flex space-x-8 text-gray-600 font-medium">
+                <a href="#" class="text-teal-600">Home</a>
+                <a href="#" class="hover:text-teal-600">Tools</a>
+                <a href="#" class="hover:text-teal-600">Pricing</a>
+                <a href="#" class="hover:text-teal-600">About</a>
+                <a href="#" class="hover:text-teal-600">Blog</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="text-gray-600 font-medium">Login</button>
+                <button class="bg-[#1a3a4a] text-white px-6 py-2 rounded-full font-medium hover:bg-teal-800 transition">Sign Up</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+            <h1 class="text-5xl font-extrabold text-gray-900 leading-tight mb-6">
+                Transforme Seu Texto <br> <span class="gradient-text">com Precisão</span>
+            </h1>
+            <p class="text-gray-600 text-lg mb-8 max-w-md">
+                A suíte completa de ferramentas de edição para escritores, estudantes e profissionais. Melhore, corrija e crie textos perfeitos em minutos.
+            </p>
+            <button class="bg-[#1a3a4a] text-white px-8 py-3 rounded-lg text-lg font-semibold hover:shadow-lg transition">
+                Experimente Grátis Agora
+            </button>
         </div>
+        <div class="flex justify-center">
+            <!-- Ilustração central baseada no template -->
+            <div class="relative w-80 h-96 bg-white border-2 border-dashed border-gray-200 rounded-xl flex flex-col p-6 shadow-sm">
+                <div class="w-full h-4 bg-gray-100 rounded mb-4"></div>
+                <div class="w-3/4 h-4 bg-gray-100 rounded mb-4"></div>
+                <div class="w-full h-32 bg-teal-50 rounded-lg flex items-center justify-center border border-teal-100">
+                    <i class="fa-solid fa-pen-nib text-teal-600 text-3xl"></i>
+                </div>
+                <div class="absolute -top-4 -right-4 bg-white p-3 shadow-md rounded-lg">
+                    <i class="fa-solid fa-spell-check text-blue-500"></i>
+                </div>
+                <div class="absolute bottom-10 -left-6 bg-white p-3 shadow-md rounded-lg">
+                    <i class="fa-solid fa-language text-purple-500"></i>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <textarea id="inputText" placeholder="Seu texto aqui..."></textarea>
+    <!-- Tools Grid Section -->
+    <main class="max-w-7xl mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4">
+            
+            <!-- Tool Card 1 -->
+            <div class="tool-card bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center">
+                <div class="text-teal-600 text-2xl mb-4"><i class="fa-solid fa-circle-check"></i></div>
+                <h3 class="font-bold text-gray-800 text-sm mb-2">Corretor Gramatical</h3>
+                <p class="text-gray-500 text-xs mb-4 leading-relaxed">Ferramenta de correção gramatical.</p>
+                <button class="w-full py-2 bg-teal-600 text-white text-xs rounded hover:bg-teal-700">Usar Ferramenta</button>
+            </div>
 
-        <h3>Resultado:</h3>
-        <div id="outputText" class="output"></div>
-    </div>
-    <script src="script.js"></script>
+            <!-- Tool Card 2 -->
+            <div class="tool-card bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center">
+                <div class="text-teal-600 text-2xl mb-4"><i class="fa-solid fa-file-signature"></i></div>
+                <h3 class="font-bold text-gray-800 text-sm mb-2">Reescritor de Texto</h3>
+                <p class="text-gray-500 text-xs mb-4 leading-relaxed">Reescrita de textos com IA.</p>
+                <button class="w-full py-2 bg-teal-600 text-white text-xs rounded hover:bg-teal-700">Usar Ferramenta</button>
+            </div>
+
+            <!-- Tool Card 3 -->
+            <div class="tool-card bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center">
+                <div class="text-teal-600 text-2xl mb-4"><i class="fa-solid fa-font"></i></div>
+                <h3 class="font-bold text-gray-800 text-sm mb-2">Formatador de Texto</h3>
+                <p class="text-gray-500 text-xs mb-4 leading-relaxed">Suite completa de formatação.</p>
+                <button class="w-full py-2 bg-teal-600 text-white text-xs rounded hover:bg-teal-700">Usar Ferramenta</button>
+            </div>
+
+            <!-- Tool Card 4 -->
+            <div class="tool-card bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center">
+                <div class="text-teal-600 text-2xl mb-4"><i class="fa-solid fa-file-lines"></i></div>
+                <h3 class="font-bold text-gray-800 text-sm mb-2">Resumidor de Artigos</h3>
+                <p class="text-gray-500 text-xs mb-4 leading-relaxed">Artigos e textos resumidos.</p>
+                <button class="w-full py-2 bg-teal-600 text-white text-xs rounded hover:bg-teal-700">Usar Ferramenta</button>
+            </div>
+
+            <!-- Tool Card 5 -->
+            <div class="tool-card bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center">
+                <div class="text-teal-600 text-2xl mb-4"><i class="fa-solid fa-calculator"></i></div>
+                <h3 class="font-bold text-gray-800 text-sm mb-2">Contador de Palavras</h3>
+                <p class="text-gray-500 text-xs mb-4 leading-relaxed">Contador de caracteres e palavras.</p>
+                <button class="w-full py-2 bg-teal-600 text-white text-xs rounded hover:bg-teal-700">Usar Ferramenta</button>
+            </div>
+
+            <!-- Tool Card 6 -->
+            <div class="tool-card bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center">
+                <div class="text-teal-600 text-2xl mb-4"><i class="fa-brands fa-markdown"></i></div>
+                <h3 class="font-bold text-gray-800 text-sm mb-2">Editor Markdown</h3>
+                <p class="text-gray-500 text-xs mb-4 leading-relaxed">Editor markdown profissional.</p>
+                <button class="w-full py-2 bg-teal-600 text-white text-xs rounded hover:bg-teal-700">Usar Ferramenta</button>
+            </div>
+
+        </div>
+    </main>
+
 </body>
 </html>
