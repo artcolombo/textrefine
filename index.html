@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TextPure - Editor de Texto Profissional</title>
     
-    <!-- SEO Otimizado -->
-    <meta name="description" content="A suíte completa de ferramentas para edição, correção e formatação de texto. Melhore a sua escrita com precisão.">
-
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -29,104 +26,51 @@
             box-shadow: 0 25px 50px -12px rgba(26, 58, 74, 0.12);
             border-color: #2dd4bf;
         }
-        .floating { animation: floating 3s ease-in-out infinite; }
-        @keyframes floating {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-        }
     </style>
 </head>
 <body class="overflow-x-hidden">
 
-    <!-- Navegação -->
     <header class="sticky top-0 z-50 bg-white/70 backdrop-blur-xl border-b border-slate-100">
         <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <div class="flex items-center space-x-2 group cursor-pointer">
-                <div class="bg-[#1a3a4a] p-2 rounded-xl group-hover:rotate-12 transition-transform">
+            <div class="flex items-center space-x-2 group">
+                <div class="bg-[#1a3a4a] p-2 rounded-xl">
                     <i class="fa-solid fa-feather-pointed text-white text-xl"></i>
                 </div>
-                <span class="text-[#1a3a4a] text-2xl font-extrabold tracking-tight">TextPure</span>
-            </div>
-            <div class="hidden lg:flex items-center space-x-10 text-slate-600 font-semibold text-sm">
-                <a href="/" class="text-teal-600 font-bold">Início</a>
-                <a href="#tools" class="hover:text-[#1a3a4a] transition">Ferramentas</a>
+                <span class="text-[#1a3a4a] text-2xl font-extrabold">TextPure</span>
             </div>
             <div class="flex items-center space-x-5">
-                <button class="bg-[#1a3a4a] text-white px-6 py-3 rounded-2xl text-sm font-bold shadow-xl hover:bg-slate-800 transition-all">Começar Grátis</button>
+                <a href="/" class="text-sm font-bold text-teal-600">Início</a>
+                <button class="bg-[#1a3a4a] text-white px-6 py-2 rounded-xl text-sm font-bold">Grátis</button>
             </div>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="max-w-7xl mx-auto px-6 pt-24 pb-20 grid lg:grid-cols-2 gap-12 items-center">
-        <div>
-            <div class="inline-flex items-center space-x-2 bg-white border border-slate-200 px-4 py-2 rounded-2xl shadow-sm mb-8">
-                <span class="flex h-2 w-2 rounded-full bg-teal-500 animate-pulse"></span>
-                <span class="text-slate-600 text-xs font-bold uppercase tracking-widest">Suíte de Texto Ativada</span>
-            </div>
-            <h1 class="text-6xl md:text-7xl font-extrabold text-slate-900 leading-tight mb-8">
-                Escrita Perfeita. <br> <span class="text-gradient">Em Segundos.</span>
-            </h1>
-            <p class="text-slate-500 text-xl leading-relaxed max-w-lg mb-10">
-                A suíte definitiva para transformar, corrigir e formatar os seus textos com precisão profissional.
-            </p>
-            <div class="flex gap-4">
-                <a href="#tools" class="bg-[#1a3a4a] text-white px-10 py-5 rounded-2xl text-lg font-bold shadow-2xl hover:-translate-y-1 transition-all inline-block">Explorar Ferramentas</a>
-            </div>
-        </div>
-
-        <!-- Ilustração Hero -->
-        <div class="relative lg:ml-10">
-            <div class="bg-white rounded-[40px] shadow-2xl border border-slate-100 p-12 floating text-center">
-                <i class="fa-solid fa-wand-magic-sparkles text-teal-400 text-6xl mb-4"></i>
-                <h2 class="text-slate-800 font-bold text-xl">TextPure Editor</h2>
-                <p class="text-slate-400">Pronto para transformar</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Grid de Ferramentas -->
     <main id="tools" class="max-w-7xl mx-auto px-6 py-24">
-        <h2 class="text-3xl font-bold text-slate-900 mb-12 text-center">Ferramentas de Edição</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             
-            <!-- TOOL: CASE CONVERTER (FIXED PATH) -->
-            <!-- Usar a barra "/" no início impede a duplicação da URL -->
+            <!-- A CORREÇÃO ESTÁ AQUI: href="/..." com barra inicial -->
             <a href="/ferramentas/transformar-texto-em-maiusculas/index.html" 
-               title="Converter texto para caixa alta online" 
                class="tool-card bg-white p-10 rounded-[32px] group">
                 <div class="w-16 h-16 bg-teal-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-teal-600 transition-colors">
                     <i class="fa-solid fa-text-height text-teal-600 text-2xl group-hover:text-white transition-colors"></i>
                 </div>
                 <h3 class="text-xl font-extrabold text-slate-900 mb-4">Case Converter</h3>
-                <p class="text-slate-500 mb-8">Transforme o seu texto em MAIÚSCULAS ou minúsculas instantaneamente.</p>
+                <p class="text-slate-500 mb-8">Transforme o seu texto em MAIÚSCULAS instantaneamente.</p>
                 <div class="grid grid-cols-2 gap-2">
                     <span class="py-2 px-3 rounded-lg bg-slate-50 text-[10px] text-center font-bold text-slate-600 group-hover:bg-[#1a3a4a] group-hover:text-white transition">UPPER</span>
                     <span class="py-2 px-3 rounded-lg bg-slate-50 text-[10px] text-center font-bold text-slate-600 group-hover:bg-[#1a3a4a] group-hover:text-white transition">lower</span>
                 </div>
             </a>
 
-            <!-- Outras ferramentas em breve -->
-            <div class="tool-card bg-slate-50 p-10 rounded-[32px] opacity-60 border-dashed border-2 border-slate-200">
-                <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-8">
-                    <i class="fa-solid fa-spell-check text-slate-300 text-2xl"></i>
-                </div>
-                <h3 class="text-xl font-extrabold text-slate-400 mb-4">Corretor</h3>
-                <p class="text-slate-400">Em desenvolvimento.</p>
-            </div>
-
-            <div class="tool-card bg-slate-50 p-10 rounded-[32px] opacity-60 border-dashed border-2 border-slate-200">
-                <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-8">
-                    <i class="fa-solid fa-arrows-rotate text-slate-300 text-2xl"></i>
-                </div>
-                <h3 class="text-xl font-extrabold text-slate-400 mb-4">Reescritor</h3>
-                <p class="text-slate-400">Em desenvolvimento.</p>
+            <!-- Placeholder -->
+            <div class="tool-card bg-slate-50 p-10 rounded-[32px] opacity-50 border-dashed border-2">
+                <h3 class="text-xl font-extrabold text-slate-400">Em breve</h3>
             </div>
 
         </div>
     </main>
 
-    <footer class="bg-slate-950 text-slate-500 py-12 text-center text-[10px] font-bold tracking-widest uppercase">
+    <footer class="bg-slate-950 text-slate-500 py-12 text-center text-[10px] font-bold uppercase">
         © 2026 TEXTPURE.
     </footer>
 
