@@ -1,89 +1,12 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO CRÍTICO -->
-    <title>Transformar Texto em Maiúsculas Online | Grátis | TextPure</title>
-    <meta name="description" content="Converta texto para MAIÚSCULAS instantaneamente. Ferramenta de caixa alta gratuita, rápida e sem limites. Ideal para títulos e destaques.">
-    <link rel="canonical" href="https://textpure.com/ferramentas/transformar-texto-em-maiusculas/">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap');
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #fcfdfe; }
-    </style>
-</head>
-<body class="p-4 md:p-8">
-
-    <main class="max-w-4xl mx-auto">
-        <!-- Navegação Simples (Voltar) -->
-        <a href="/" class="text-slate-400 hover:text-teal-600 font-bold text-sm transition flex items-center gap-2 mb-8">
-            <i class="fa-solid fa-arrow-left"></i> Voltar para TextPure
-        </a>
-
-        <!-- Título H1 (SEO Principal) -->
-        <h1 class="text-4xl font-extrabold text-slate-900 mb-2">Transformar Texto em Maiúsculas</h1>
-        <p class="text-slate-500 mb-8 text-lg">Converta sua caixa baixa para caixa alta em um clique.</p>
-
-        <!-- Área da Ferramenta -->
-        <div class="bg-white rounded-[32px] shadow-2xl border border-slate-100 p-6 mb-12">
-            <textarea id="input" rows="10" 
-                class="w-full p-6 bg-slate-50 border-none rounded-2xl text-slate-700 focus:ring-2 focus:ring-teal-500 outline-none resize-none mb-6" 
-                placeholder="Cole ou digite seu texto aqui..."></textarea>
-            
-            <div class="flex flex-wrap gap-4">
-                <button onclick="convertToUpper()" class="bg-[#1a3a4a] text-white px-8 py-4 rounded-2xl font-bold hover:bg-slate-800 transition shadow-lg">
-                    CONVERTER PARA MAIÚSCULAS
-                </button>
-                <button onclick="copyText()" class="border-2 border-slate-100 px-8 py-4 rounded-2xl font-bold text-slate-600 hover:bg-slate-50 transition">
-                    Copiar Resultado
-                </button>
-                <button onclick="clearText()" class="text-slate-400 font-bold hover:text-red-500 ml-auto">
-                    Limpar
-                </button>
-            </div>
-        </div>
-
-        <!-- Conteúdo SEO (Explicação para o Google) -->
-        <article class="prose prose-slate max-w-none border-t border-slate-100 pt-12">
-            <h2 class="text-2xl font-bold text-slate-800 mb-4">Como funciona o conversor de Caixa Alta?</h2>
-            <p class="text-slate-600 mb-6">Nossa ferramenta de <strong>transformar texto em maiúsculas</strong> permite que você altere o formato de qualquer conteúdo textual instantaneamente. Se você esqueceu o <em>Caps Lock</em> desligado ou precisa formatar um título padrão para documentos e e-mails, o TextPure resolve em segundos.</p>
-            
-            <div class="grid md:grid-cols-2 gap-8 mb-12">
-                <div class="bg-teal-50 p-6 rounded-2xl">
-                    <h3 class="font-bold text-teal-800 mb-2">Segurança de Dados</h3>
-                    <p class="text-teal-700 text-sm">O processamento é feito localmente no seu navegador. Seu texto nunca sai do seu computador.</p>
-                </div>
-                <div class="bg-blue-50 p-6 rounded-2xl">
-                    <h3 class="font-bold text-blue-800 mb-2">Sem Limite de Caracteres</h3>
-                    <p class="text-blue-700 text-sm">Converta desde palavras únicas até livros inteiros sem custos ou registros.</p>
-                </div>
-            </div>
-        </article>
-    </main>
-
-    <!-- Script Funcional -->
-    <script>
-        const inputArea = document.getElementById('input');
-
-        function convertToUpper() {
-            inputArea.value = inputArea.value.toUpperCase();
-        }
-
-        function copyText() {
-            inputArea.select();
-            document.execCommand('copy');
-            alert('Texto copiado!');
-        }
-
-        function clearText() {
-            inputArea.value = '';
-        }
-    </script>
-
-</body>
-</html>
+<!-- Tool: Case Converter (Link SEO Otimizado) -->
+<a href="/ferramentas/transformar-texto-em-maiusculas/" title="Usar ferramenta de converter texto para caixa alta" class="tool-card bg-white p-10 rounded-[32px] block group">
+    <div class="w-16 h-16 bg-teal-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-teal-600 transition-colors">
+        <i class="fa-solid fa-text-height text-teal-600 text-2xl group-hover:text-white transition-colors"></i>
+    </div>
+    <h3 class="text-xl font-extrabold text-slate-900 mb-4">Case Converter</h3>
+    <p class="text-slate-500 mb-8">Alterne entre MAIÚSCULAS, minúsculas e capitalização de títulos num clique.</p>
+    <div class="grid grid-cols-2 gap-2">
+        <span class="py-2 px-3 rounded-lg bg-slate-50 text-[10px] text-center font-bold text-slate-600 group-hover:bg-[#1a3a4a] group-hover:text-white transition">UPPER</span>
+        <span class="py-2 px-3 rounded-lg bg-slate-50 text-[10px] text-center font-bold text-slate-600 group-hover:bg-[#1a3a4a] group-hover:text-white transition">lower</span>
+    </div>
+</a>
